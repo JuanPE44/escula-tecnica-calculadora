@@ -18,7 +18,7 @@ body{
     align-items: center;
     flex-direction: column;
     padding: 10px;
-    overflow: hidden;
+    overflow: scroll;
     border-radius: 10px;
 }
 .calculadora .input-number{
@@ -51,7 +51,6 @@ body{
 }
 
 .input-number input:hover{
-    transform: translateX(-5px)translateY(-30px);
     transition: 1s;
 
 }

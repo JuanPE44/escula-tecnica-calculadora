@@ -15,28 +15,28 @@
          </div>
           <div class="botones">
             <button class="boton" onclick="AC()">AC</button>
-            <button class="boton" onclick="op('+/-')">+/-</button>
-            <button class="boton" onclick="op('%')">%</button>
-            <button class="boton" onclick="op('÷')">÷</button>
+            <button class="boton" onclick="cambiarSigno()">+/-</button>
+            <button class="boton" onclick="AsignarOperador('%')">%</button>
+            <button class="boton" onclick="AsignarOperador('/')">÷</button>
 
-            <button class="boton verde" onclick="agregarNumero(7)" >7</button>
-            <button class="boton verde" onclick="agregarNumero(8)">8</button>
-            <button class="boton verde" onclick="agregarNumero(9)">9</button>
-            <button class="boton" onclick="op('x')">x</button>
+            <button class="boton verde" onclick="agregar(7)">7</button>
+            <button class="boton verde" onclick="agregar(8)">8</button>
+            <button class="boton verde" onclick="agregar(9)">9</button>
+            <button class="boton" onclick="AsignarOperador('*')">x</button>
 
-            <button class="boton verde" onclick="agregarNumero(4)">4</button>
-            <button class="boton verde" onclick="agregarNumero(5)">5</button>
-            <button class="boton verde" onclick="agregarNumero(6)">6</button>
-            <button class="boton">-</button>
+            <button class="boton verde" onclick="agregar(4)">4</button>
+            <button class="boton verde" onclick="agregar(5)">5</button>
+            <button class="boton verde" onclick="agregar(6)">6</button>
+            <button class="boton" onclick="AsignarOperador('-')">-</button>
         
-            <button class="boton verde" onclick="agregarNumero(1)">1</button>
-            <button class="boton verde" onclick="agregarNumero(2)">2</button>
-            <button class="boton verde" onclick="agregarNumero(3)">3</button>
-            <button class="boton">+</button>
+            <button class="boton verde" onclick="agregar(1)">1</button>
+            <button class="boton verde" onclick="agregar(2)">2</button>
+            <button class="boton verde" onclick="agregar(3)">3</button>
+            <button class="boton" onclick="AsignarOperador('+'), sumar()">+</button>
         
-            <button class="boton verde" onclick="agregarNumero(0)">0</button>
-            <button class="boton verde" onclick="agregarNumero('.')">.</button>
-            <button class="igual" onclick="result()">=</button>
+            <button class="boton verde" onclick="agregar(0)">0</button>
+            <button class="boton verde" onclick="agregar('.')">.</button>
+            <button class="igual" onclick="igual()">=</button>
        </div>
     </div>
 </body>

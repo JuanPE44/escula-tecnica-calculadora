@@ -1,57 +1,69 @@
-let operando1 = '';
-let operando2 = '';
+let operandos = [];
 let operador = '';
 let resultado = '';
 
-function agregarNumero(numero) {
-    if (operador === '') {
-      operando1 += numero;
-      document.getElementById('pantalla').value = operando1;
-    } else {
-      operando2 += numero;
-      document.getElementById('pantalla').value = operando2;
-    }
-  }
+function agregar(numero) {
+    operandos.push(numero);
+    document.getElementById('pantalla').value = operandos.join('');
+}
   
-  function agregarDecimal() {
-    if (operador === '' && !operando1.includes('.')) {
-      operando1 += '.';
-      document.getElementById('pantalla').value = operando1;
-    } else if (operador !== '' && !operando2.includes('.')) {
-      operando2 += '.';
-      document.getElementById('pantalla').value = operando2;
+function agregarDecimal() {
+    if (!operandos.includes('.')) {
+      operandos.push('.');
+      document.getElementById('pantalla').value = operandos.join('');
     }
-  }
-  
-  function op(op) {
+}
+function AsignarOperador(op) {
     operador = op;
-  }
-   function calcularPorcentaje(numero, porcentaje) {
-    return (porcentaje / 100) * numero;
-  }
-
-  function calcular() {
-    let num1 = parseFloat(operando1);
-    let num2 = parseFloat(operando2);
-    switch (operador) {
-        case '%':
-        resultado = calcularPorcentaje(num1,num2);
-      case '+':
-        resultado = num1 + num2;
-        break;
-      case '-':
-        resultado = num1 - num2;
-        break;
-      case '*':
-        resultado = num1 * num2;
-        break;
-      case '/':
-        resultado = num1 / num2;
-        break;
-      default:
-        resultado = '';
-    }
+    operandos.push(operador);
+    document.getElementById('pantalla').value = operandos.join('');
+}
+  
+function cambiarSigno() {
+    resultado = -1 * parseFloat(resultado);
     document.getElementById('pantalla').value = resultado;
+}
+  
+  
+function calcular() {
+    let total = parseFloat(operandos[0]);
+  
+    for (let i = 1; i < operandos.length; i += 2) {
+      const operador = operandos[i];
+      const operando = parseFloat(operandos[i + 1]);
+  
+      switch (operador) {
+        case '+':
+          total += operando;
+          break;
+        case '-':
+          total -= operando;
+          break;
+        case '*':
+          total *= operando;
+          break;
+        case '/':
+          total /= operando;
+          break;
+      }
+    }
+  
+    return total;
   }
+  
 
- 
+  function AC() {
+    operandos = [];
+    resultado = '';
+    document.getElementById('pantalla').value = '';
+  }
+  
+  function igual() {
+    if (operandos.length === 0 || typeof operandos[operandos.length - 1] === 'string') {
+      return;
+    }
+  
+    resultado = calcular();
+    document.getElementById('pantalla').value = resultado;
+    operandos = [resultado];
+  }
