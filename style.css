@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora{
+    background-color: #242530;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.calculadora .input-number{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10rem;
+    margin-bottom: 20px;
+    
+
+
+}
+
+.input-number input{
+    max-width: 200px;
+    margin-right: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: right;
+    font-size: 1.7rem;
+    
+}
+
+.input-number input:focus{
+    transition: 1s;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.input-number input:hover{
+    transform: translateX(-5px)translateY(-30px);
+    transition: 1s;
+
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: repeat(4,60px);
+    grid-template-rows: repeat(5,60px);
+    gap: 10px;
+}
+.botones .igual{
+    grid-column: 5 / 3;
+    border-radius: 60px
+}
+
+.botones button{
+    border-radius: 50%;
+}
+
+button{
+    background-color:  #2EE88B;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.verde{
+    background-color: #EDEDED;
+}
+
+.boton:hover{
+transition: .1s;
+transform: translateX(7px);
+border: 1px solid #2EE88B;
+}
+
+.igual:hover{
+    
+transition: .1s;
+transform: translateY(2px);
+border: 1px solid #2EE88B;
+}
+
