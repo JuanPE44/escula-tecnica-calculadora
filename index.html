@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/style.css">
-    <title>Document</title>
+    <title>Calculadora</title>
 </head>
 <body>
+    <div id="boton-play"onclick="reproducirContinuamente(Math.floor(Math.random() * sonidos.length))" >play</div>
+    <div id="boton-detener"onclick="detenerReproduccion()">stop</div>
+
     <div class="calculadora">
          <div class="input-number">
             <input type="text" readonly>
@@ -38,8 +41,14 @@
             <button class="igual verde">=</button>
        </div>
     </div>
-    <div id="boton-play"onclick="reproducirContinuamente(tumadre)" class="boton2 blanco2">a</div>
-    <script src="script.js"></script>
-    <script src="sonido.js"></script>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/sonido.js"></script>
+    <script src="scripts/b1.js"></script>
+    <script src="scripts/b2.js"></script>
+<script> window.onload = function() {
+    moverBotonPlay();
+    moverBotonDetener();
+  };</script>
 </body>
 </html>
