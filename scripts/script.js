@@ -56,13 +56,3 @@ function falso(){
     return
 }
 
-setInterval(function() {
-   const botonPlay = document.getElementById("boton-play");
-   const botonDetener = document.getElementById("boton-detener");
- 
-   botonPlay.style.left = Math.floor(Math.random() * (window.innerWidth - botonPlay.offsetWidth)) + "px";
-   botonPlay.style.top = Math.floor(Math.random() * (window.innerHeight - botonPlay.offsetHeight)) + "px";
- 
-   botonDetener.style.left = Math.floor(Math.random() * (window.innerWidth - botonDetener.offsetWidth)) + "px";
-   botonDetener.style.top = Math.floor(Math.random() * (window.innerHeight - botonDetener.offsetHeight)) + "px";
- }, 3000);
