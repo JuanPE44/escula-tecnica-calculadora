@@ -9,6 +9,8 @@ body{
     align-items: center;
     height: 100vh;
     background: linear-gradient(45deg, #90937b, #c6ca8e);
+	background-size: 200%;
+	animation: fondo 10s ease infinite; 
 }
 
 .calculadora{
@@ -22,21 +24,6 @@ body{
     box-shadow: .2px .5px 50px #000000; 
     
 }
-
-.calculadora2{
-    margin-left: 200px;
-    background-color: #242530;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: .2px .5px 50px #000000; 
-    
-}
-
-
-
-
 .calculadora .input-number{
     width: 100%;
     display: flex;
@@ -73,21 +60,6 @@ body{
     grid-template-rows: repeat(5,60px);
     gap: 10px;
 }
-
-.botones2{
-    display: grid;
-    grid-template-columns: repeat(3,20px);
-    grid-template-rows: repeat(2,20px);
-}
-
-button.boton2{
-    font-size: 0.89rem;
-}
-
-.boton2.blanco2{
-    box-shadow: 0px .2px 5px #fff; 
-}
-
 .botones .igual{
     grid-column: 5 / 3;
     border-radius: 60px
@@ -134,3 +106,9 @@ box-shadow: 0px 1px 10px #2EE88B;
 
 }
 
+
+#boton-play{
+    margin-left: 4px;
+    font-size: 5px;
+    cursor: pointer;
+}

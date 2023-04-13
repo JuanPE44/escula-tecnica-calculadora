@@ -6,13 +6,11 @@ let Resta = false
 let Multiplicacion = false
 let Division = false
 
-
 botones.forEach(function(boton){
     boton.addEventListener("click", mostrar)
 })
 
 function mostrar(e){
-    
     const teclaPresionada = e.target.innerHTML
     if (teclaPresionada === '=') {
        crearesultado()
@@ -57,4 +55,3 @@ function falso(){
     Division = false
     return
 }
-
