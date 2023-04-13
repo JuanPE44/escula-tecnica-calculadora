@@ -1,36 +1,40 @@
-let operandos = [];
+let numeros = [];
 let operador = '';
 let resultado = '';
+window.addEventListener('load', function() {
+    pantalla = document.getElementById('pantalla');
+  });
 
 function agregar(numero) {
-    operandos.push(numero);
-    document.getElementById('pantalla').value = operandos.join('');
+  numeros.push(numero);
+  pantalla.value = numeros.join('');
 }
-  
+
 function agregarDecimal() {
-    if (!operandos.includes('.')) {
-      operandos.push('.');
-      document.getElementById('pantalla').value = operandos.join('');
-    }
+  if (!numeros.includes('.')) {
+    numeros.push('.');
+    pantalla.value += numeros.join('');
+  }
 }
+
 function AsignarOperador(op) {
-    operador = op;
-    operandos.push(operador);
-    document.getElementById('pantalla').value = operandos.join('');
+  operador = op;
+  numeros.push(operador);
+  pantalla.value = numeros.join('');
 }
-  
+
 function cambiarSigno() {
-    resultado = -1 * parseFloat(resultado);
-    document.getElementById('pantalla').value = resultado;
+  let numero = parseFloat(pantalla.value);
+  numero *= -1;
+  pantalla.value = numero;
 }
-  
-  
+
 function calcular() {
-    let total = parseFloat(operandos[0]);
+    let total = parseFloat(numeros[0]);
   
-    for (let i = 1; i < operandos.length; i += 2) {
-      const operador = operandos[i];
-      const operando = parseFloat(operandos[i + 1]);
+    for (let i = 1; i < numeros.length; i += 2) {
+      const operador = numeros[i];
+      const operando = parseFloat(numeros[i + 1]);
   
       switch (operador) {
         case '+':
@@ -50,20 +54,23 @@ function calcular() {
   
     return total;
   }
-  
 
-  function AC() {
-    operandos = [];
-    resultado = '';
-    document.getElementById('pantalla').value = '';
-  }
-  
-  function igual() {
-    if (operandos.length === 0 || typeof operandos[operandos.length - 1] === 'string') {
+function AC() {
+  numeros = [];
+  resultado = '';
+  pantalla.value = '';
+}
+
+function igual() {
+    if (numeros.length === 0 || typeof numeros[numeros.length - 1] === 'string') {
       return;
     }
   
     resultado = calcular();
-    document.getElementById('pantalla').value = resultado;
-    operandos = [resultado];
+    actualizarPantalla(resultado);
+    numeros = [resultado];
+  }
+  
+  function actualizarPantalla(valor) {
+    document.getElementById('pantalla').value = valor.toString();
   }
