@@ -1,8 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    
-
 }
 
 body{
@@ -10,6 +8,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(45deg, #90937b, #c6ca8e);
+	background-size: 200%;
+	animation: fondo 10s ease infinite; 
 }
 
 .calculadora{
@@ -18,8 +19,10 @@ body{
     align-items: center;
     flex-direction: column;
     padding: 10px;
-    overflow: scroll;
+    text-overflow:ellipsis;
     border-radius: 10px;
+    box-shadow: .2px .5px 50px #000000; 
+    
 }
 .calculadora .input-number{
     width: 100%;
@@ -27,9 +30,6 @@ body{
     justify-content: flex-end;
     margin-top: 10rem;
     margin-bottom: 20px;
-    
-
-
 }
 
 .input-number input{
@@ -52,7 +52,6 @@ body{
 
 .input-number input:hover{
     transition: 1s;
-
 }
 
 .botones{
@@ -71,25 +70,39 @@ body{
 }
 
 button{
-    background-color:  #2EE88B;
+    background-color: #EDEDED;
     border: none;
     font-size: 1.3rem;
 }
 
 .verde{
-    background-color: #EDEDED;
+    background-color:  #2EE88B;
+    box-shadow: 0px .2px 5px #2EE88B; 
+    
+}
+
+.boton.blanco{
+    box-shadow: 0px .2px 5px #fff; 
 }
 
 .boton:hover{
 transition: .1s;
-transform: translateX(7px);
-border: 1px solid #2EE88B;
+transform: translateY(-2px) scale(1.1);
+cursor: pointer;
+
 }
+.boton.verde:hover{
+    transition: .1s;
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0px 1px 10px #2EE88B; 
+    }
 
 .igual:hover{
     
 transition: .1s;
-transform: translateY(2px);
-border: 1px solid #2EE88B;
+transform: translateY(-2px)scale(1.1);
+cursor: pointer;
+box-shadow: 0px 1px 10px #2EE88B; 
+
 }
 
