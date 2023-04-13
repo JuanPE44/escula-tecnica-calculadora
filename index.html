@@ -5,39 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <title>Calculadora</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="calculadora">
-         <div class="input-number" >
-            <input type="text" id="pantalla">
+         <div class="input-number">
+            <input type="text" readonly>
          </div>
           <div class="botones">
-            <button class="boton" onclick="AC()">AC</button>
-            <button class="boton" onclick="cambiarSigno()">+/-</button>
-            <button class="boton" onclick="AsignarOperador('%')">%</button>
-            <button class="boton" onclick="AsignarOperador('/')">÷</button>
+            <button class="boton">AC</button>
+            <button class="boton">+/-</button>
+            <button class="boton">%</button>
+            <button class="boton">/</button>
 
-            <button class="boton verde" onclick="agregar(7)">7</button>
-            <button class="boton verde" onclick="agregar(8)">8</button>
-            <button class="boton verde" onclick="agregar(9)">9</button>
-            <button class="boton" onclick="AsignarOperador('*')">x</button>
+            <button class="boton verde" >7</button>
+            <button class="boton verde" >8</button>
+            <button class="boton verde" >9</button>
+            <button class="boton">*</button>
 
-            <button class="boton verde" onclick="agregar(4)">4</button>
-            <button class="boton verde" onclick="agregar(5)">5</button>
-            <button class="boton verde" onclick="agregar(6)">6</button>
-            <button class="boton" onclick="AsignarOperador('-')">-</button>
+            <button class="boton verde" >4</button>
+            <button class="boton verde" >5</button>
+            <button class="boton verde" >6</button>
+            <button class="boton">-</button>
         
-            <button class="boton verde" onclick="agregar(1)">1</button>
-            <button class="boton verde" onclick="agregar(2)">2</button>
-            <button class="boton verde" onclick="agregar(3)">3</button>
-            <button class="boton" onclick="AsignarOperador('+')">+</button>
+            <button class="boton verde" >1</button>
+            <button class="boton verde" >2</button>
+            <button class="boton verde" >3</button>
+            <button class="boton">+</button>
         
-            <button class="boton verde" onclick="agregar(0)">0</button>
-            <button class="boton verde" onclick="agregar('.')">.</button>
-            <button class="igual" onclick="igual()">=</button>
+            <button class="boton verde" >0</button>
+            <button class="boton verde" >.</button>
+            <button class="igual" >=</button>
        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
