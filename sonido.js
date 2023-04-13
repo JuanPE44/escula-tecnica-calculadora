@@ -20,5 +20,4 @@ function detenerReproduccion() {
     sonido.pause();
   }
 
-
 reproducirContinuamente(tumadre);
